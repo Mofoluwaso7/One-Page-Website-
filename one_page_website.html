@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Page Website</title>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        img {
+            width: 200px;
+            margin: 10px;
+        }
+
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation with bookmarks -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#videos">Videos</a>
+        <a href="#footer">Footer</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to My One-Page Website</h1>
+        <p>
+            This is a simple one-page HTML website that demonstrates navigation,
+            images, a contact form, embedded videos, and a footer.
+        </p>
+    </section>
+
+    <!-- Image Section -->
+    <section id="gallery">
+        <h2>Image Gallery</h2>
+
+        <img src="https://via.placeholder.com/200" alt="Sample Image 1">
+        <img src="https://via.placeholder.com/200" alt="Sample Image 2">
+        <img src="https://via.placeholder.com/200" alt="Sample Image 3">
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Video Section -->
+    <section id="videos">
+        <h2>Watch Our Video</h2>
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2026 One Page Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
