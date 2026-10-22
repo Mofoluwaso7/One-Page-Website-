@@ -6,9 +6,18 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
+            font-size: 18px;
             margin: 0;
             line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 30px;
         }
 
         nav {
@@ -51,6 +60,73 @@
             text-align: center;
             padding: 15px;
         }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            padding: 64px 24px 24px;
+            background: rgba(0, 0, 0, 0.92);
+            color: white;
+        }
+
+        .lightbox[hidden] {
+            display: none;
+        }
+
+        .lightbox-figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        .lightbox-image {
+            display: block;
+            width: auto;
+            max-width: min(80vw, 1000px);
+            max-height: 75vh;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        .lightbox-caption {
+            margin-top: 12px;
+        }
+
+        .lightbox button {
+            border: 0;
+            padding: 8px 12px;
+            background: transparent;
+            color: white;
+            font: inherit;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .lightbox button:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .lightbox {
+                gap: 4px;
+                padding: 56px 8px 16px;
+            }
+
+            .lightbox-image {
+                max-width: 70vw;
+            }
+        }
     </style>
 </head>
 <body>
@@ -77,9 +153,9 @@
     <section id="gallery">
         <h2>Image Gallery</h2>
 
-        <img src="https://via.placeholder.com/200" alt="Sample Image 1">
-        <img src="https://via.placeholder.com/200" alt="Sample Image 2">
-        <img src="https://via.placeholder.com/200" alt="Sample Image 3">
+        <img src="https://loremflickr.com/200/140/cat" data-large-src="https://loremflickr.com/1200/800/cat" alt="Cat">
+        <img src="https://loremflickr.com/200/140/lion" data-large-src="https://loremflickr.com/1200/800/lion" alt="Lion">
+        <img src="https://loremflickr.com/200/140/crocodile" data-large-src="https://loremflickr.com/1200/800/crocodile" alt="Crocodile">
     </section>
 
     <!-- Contact Form Section -->
@@ -87,9 +163,9 @@
         <h2>Contact Us</h2>
 
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="4" placeholder="Your Message"></textarea>
+            <input type="text" name="name" placeholder="Your Name" value="mofoluwaso" required>
+            <input type="email" name="email" placeholder="Your Email" value="drfoluso@yahoo.com" required>
+            <textarea name="message" rows="4" placeholder="Your Message">this is my one-page website</textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
@@ -113,23 +189,7 @@
         <p>&copy; 2026 One Page Website. All rights reserved.</p>
     </footer>
 
+    <script src="JS/one_page_website.js"></script>
 </body>
 </html>
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 18px;
-}
-
-body {
-    font-family: 'Georgia', serif;
-    font-size: 18px;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-h2 {
-    font-size: 30px;
-}
