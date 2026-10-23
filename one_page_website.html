@@ -46,6 +46,43 @@
             margin: 10px;
         }
 
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        #gallery h2 {
+            flex-basis: 100%;
+        }
+
+        #gallery > img {
+            margin: 0;
+        }
+
+        #animal-slideshow {
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            background: #111;
+        }
+
+        .gallery-attribution {
+            display: inline-block;
+            width: 200px;
+            margin: 0;
+        }
+
+        .gallery-attribution img {
+            display: block;
+            margin: 0;
+        }
+
+        .gallery-attribution figcaption {
+            font-size: 0.7em;
+        }
+
         form input, form textarea, form button {
             display: block;
             width: 100%;
@@ -153,9 +190,12 @@
     <section id="gallery">
         <h2>Image Gallery</h2>
 
-        <img src="https://loremflickr.com/200/140/cat" data-large-src="https://loremflickr.com/1200/800/cat" alt="Cat">
-        <img src="https://loremflickr.com/200/140/lion" data-large-src="https://loremflickr.com/1200/800/lion" alt="Lion">
-        <img src="https://loremflickr.com/200/140/crocodile" data-large-src="https://loremflickr.com/1200/800/crocodile" alt="Crocodile">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&auto=format&fit=crop&q=80" data-large-src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1600&auto=format&fit=crop&q=85" alt="Cat">
+        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=400&auto=format&fit=crop&q=80" data-large-src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1600&auto=format&fit=crop&q=85" alt="Lion">
+        <figure class="gallery-attribution">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Crocodile_portrait%2C_Dubai_Crocodile_Park%2C_UAE.jpg/960px-Crocodile_portrait%2C_Dubai_Crocodile_Park%2C_UAE.jpg" data-large-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Crocodile_portrait%2C_Dubai_Crocodile_Park%2C_UAE.jpg/960px-Crocodile_portrait%2C_Dubai_Crocodile_Park%2C_UAE.jpg" alt="Crocodile">
+            <figcaption>Photo by <a href="https://commons.wikimedia.org/wiki/File:Crocodile_portrait,_Dubai_Crocodile_Park,_UAE.jpg">Tashmetova808</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption>
+        </figure>
     </section>
 
     <!-- Contact Form Section -->
@@ -172,16 +212,12 @@
 
     <!-- Video Section -->
     <section id="videos">
-        <h2>Watch Our Video</h2>
-
-        <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
+        <h2>Animal Image Slideshow</h2>
+        <video id="animal-slideshow" controls playsinline preload="metadata" aria-label="Slideshow of a cat, lion, and crocodile">
+            <source src="Videos/animal_slideshow.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <p>The crocodile photo in the slideshow is by <a href="https://commons.wikimedia.org/wiki/File:Crocodile_portrait,_Dubai_Crocodile_Park,_UAE.jpg">Tashmetova808</a> and is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
     </section>
 
     <!-- Footer -->
